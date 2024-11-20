@@ -4,21 +4,21 @@
   <form
     [formGroup]="createTaskForm"
     (ngSubmit)="createTask()"
-    class="col-2 d-flex flex-column align-items-center">
-    <div class="w-100 d-flex flex-nowrap justify-content-between mt-3">
+    class="col-4 d-flex flex-column align-items-center">
+    <div class="width-form-div d-flex flex-nowrap justify-content-between mt-3">
       <label for="name">Task Name</label>
       <input id="name" formControlName="Name"/>
     </div>
     <div *ngIf="name?.invalid && name?.touched">Task name is required.</div>
 
-    <div class="w-100 d-flex flex-nowrap justify-content-between mt-3">
+    <div class="width-form-div d-flex flex-nowrap justify-content-between mt-3">
       <label for="description">Description</label>
       <input id="description" formControlName="Description"/>
     </div>
     <div *ngIf="description?.invalid && description?.touched">Description is required.</div>
 
     <!-- Status Dropdown -->
-    <div class="w-100 d-flex flex-nowrap justify-content-between mt-3">
+    <div class="width-form-div d-flex flex-nowrap justify-content-between mt-3">
       <label for="status">Status</label>
       <select id="status" class="drop-input" formControlName="Status">
         <option value="" disabled>Select Status</option>
@@ -29,7 +29,7 @@
     </div>
     <div *ngIf="status?.invalid && status?.touched">Status is required.</div>
 
-    <div class="w-100 d-flex flex-nowrap justify-content-between mt-3">
+    <div class="width-form-div d-flex flex-nowrap justify-content-between mt-3">
       <label for="assignedTo">Assigned To</label>
       <input id="assignedTo" formControlName="AssignedTo"/>
     </div>
